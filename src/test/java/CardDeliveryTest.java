@@ -26,7 +26,7 @@ public class CardDeliveryTest {
         String date = generateDate();
         SelenideElement form = $(".form");
         form.$("[data-test-id=city] input").setValue("Москва");
-        form.$("[data-test-id=date] input").doubleClick().sendKeys(Keys.DELETE);
+        form.$("[data-test-id=date] input").sendKeys(Keys.chord(Keys.SHIFT,Keys.HOME),Keys.DELETE);
         form.$("[data-test-id=date] input").setValue(date);
         form.$("[data-test-id=name] input").setValue("Пупов Михаил");
         form.$("[data-test-id=phone] input").setValue("+79088888888");
